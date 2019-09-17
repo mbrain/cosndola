@@ -5,7 +5,7 @@
 <title>Intro</title>
 
 <meta charset="utf-8">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdn.zarat.ml/css/z.css">
 <script type="text/javascript" src="https://cdn.zarat.ml/js/z.js"></script>
 
@@ -29,18 +29,40 @@ width:100%;
 
 <div class="z-container z-content z-padding-64 z-full-height" id="section1">
     <div class="z-container">
-        <div class="z-container">
+        <!--
             <img style="width:100%" src="http://cosndola.com/medien/images/cosn-dola-seitenkopf.png">        
-            <div class="z-bar z-black z-center">
-                <a href="#home" class="zarat-bar-item zarat-button z-padding-small">HOME</a>
-                <a href="#home" class="zarat-bar-item zarat-button z-padding-small">Veranstaltungen</a>
-                <a href="#home" class="zarat-bar-item zarat-button z-padding-small">Fotos</a>
-                <a href="#home" class="zarat-bar-item zarat-button z-padding-small">Videos</a>
-                <a href="#home" class="zarat-bar-item zarat-button z-padding-small">Presse</a>
-                <a href="#home" class="zarat-bar-item zarat-button z-padding-small">Impressum</a>
-                <a href="#home" class="zarat-bar-item zarat-button z-padding-small">Links</a>
+            <div class="z-bar z-black z-center z-row">
+                <a href="#home" class="z-col s12 m6 l2 zarat-bar-item zarat-button z-padding-small">HOME</a>
+                <a href="#veranstaltungen" class="z-col s12 m6 l2 zarat-bar-item zarat-button z-padding-small">Veranstaltungen</a>
+                <a href="#fotos" class="z-col s12 m6 l2 zarat-bar-item zarat-button z-padding-small">Fotos</a>
+                <a href="#videos" class="z-col s12 m6 l2 zarat-bar-item zarat-button z-padding-small">Videos</a>
+                <a href="#presse" class="z-col s12 m6 l2 zarat-bar-item zarat-button z-padding-small">Presse</a>
+                <a href="#impressum" class="z-col s12 m6 l2 zarat-bar-item zarat-button z-padding-small">Impressum</a>
+                <a href="#links" class="z-col s12 m6 l2 zarat-bar-item zarat-button z-padding-small">Links</a>
             </div>
-        </div>      
+        -->  
+        <img style="width:100%" src="http://cosndola.com/medien/images/cosn-dola-seitenkopf.png">
+        
+<div class="z-bar z-black z-card">  
+
+    <a class="z-bar-item z-button z-padding-large z-hide-medium z-hide-large z-right" href="javascript:void(0)" onclick="$().toggle($('#nav'))" title="Toggle Navigation Menu">...</a>
+    <a href="#" class="z-bar-item z-button z-padding-large">Home</a>
+    <a href="#events" class="z-bar-item z-button z-padding-large z-hide-small">Events</a>
+    <a href="#fotos" class="z-bar-item z-button z-padding-large z-hide-small">Fotos</a>
+    <a href="#videos" class="z-bar-item z-button z-padding-large z-hide-small">Videos</a>
+    <a href="#presse" class="z-bar-item z-button z-padding-large z-hide-small">Presse</a>
+    <a href="#impressum" class="z-bar-item z-button z-padding-large z-hide-small">Impressum</a>
+    <a href="#links" class="z-bar-item z-button z-padding-large z-hide-small">Links</a>
+
+  <div id="nav" class="z-bar-block z-white z-hide z-hide-large z-hide-medium">
+    <a href="#about" class="z-bar-item z-button" onclick="$().toggle($('#nav'))">ABOUT</a>
+    <a href="#portfolio" class="z-bar-item z-button" onclick="$().toggle($('#nav'))">PORTFOLIO</a>
+    <a href="#contact" class="z-bar-item z-button" onclick="$().toggle($('#nav'))">CONTACT</a>
+    <a href="#" class="z-bar-item z-button">SEARCH</a>
+  </div>
+        
+    </div>
+            
     </div>
     <div class="z-container z-content z-padding-64">
         <div class="z-container" id="inhalt">
@@ -52,3 +74,12 @@ width:100%;
         </div>
     </div>
 </div>
+
+<script>
+// toggle mobile menu
+function toggleMenu() {
+    var nav = document.getElementById("nav");
+    if (nav.className.indexOf("z-show") == -1) nav.className += " z-show";
+    else nav.className = nav.className.replace(" z-show", "");
+}
+</script>
